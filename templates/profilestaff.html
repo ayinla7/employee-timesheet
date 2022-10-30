@@ -58,63 +58,68 @@
     <div class="row">
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                <img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+                <img class="rounded-circle mt-3" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
                 <span class="font-weight-bold"> {{gpd[0][0].upper()}} </span>
                 <span class="font-weight-bold"> {{gpd[0][2].upper() + " " + gpd[0][3].upper()}} </span>
                 <span class="text-black-50"></span><span> {{gpd[0][6].capitalize()}} </span>
-                <br>
             </div>
 
-            <a href="/view"
-               style="margin-top:10px"
-              class="btn btn-secondary d-flex align-items-center justify-content-center">
-              <span class="sidebar-icon d-inline-flex align-items-center justify-content-center">
-                <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path></svg>
-              </span>
-              <span>Assignment</span>
-            </a>
+
 
         </div>
         <div class="col-md-5 border-right">
             <div class="p-3 py-5">
-                <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">NHS Number</label><input type="text" class="form-control" placeholder="NHS" value="{{gpd[0][0]}}" readonly></div>
-                    <div class="col-md-6"><label class="labels">NHS Number</label><input type="text" class="form-control" placeholder="NHS" value="{{gpd[0][1]}}" readonly></div>
-                    <div class="col-md-6"><label class="labels">fname</label><input type="text" class="form-control" placeholder="First name" value="{{gpd[0][2]}}" readonly></div>
-                    <div class="col-md-6"><label class="labels">lname</label><input type="text" class="form-control" value="{{gpd[0][3]}}" placeholder="Last name" readonly></div>
+                <div class="row mt-5">
+                    <div class="col-md-12"><label class="labels">Registration Number: {{gpd[0][0]}}</label>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-md-6"><label class="labels">Name: {{gpd[0][3] +" "+ gpd[0][2]}} </label>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-md-12"><label class="labels">Mobile Number: {{gpd[0][4]}}</label>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-md-12"><label class="labels">Date Of Birth: {{gpd[0][5]}}</label>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-md-12"><label class="labels">Email: {{gpd[0][6]}}</label>
+                    </div>
+                    <br>
+                    <br>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control"  value="{{gpd[0][4]}}" readonly></div>
-                    <div class="col-md-12"><label class="labels">Date Of Birth</label><input type="text" class="form-control"  value="{{gpd[0][5]}}" readonly></div>
-                    <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control"  value="{{gpd[0][6]}}" readonly></div>
-                    <div class="col-md-12"><label class="labels">Gender</label><input type="text" class="form-control"  value="{{gpd[0][7]}}" readonly></div>
-                    <br>
-                    <br>
-                    <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control" value="{{gpd[0][8]}}" readonly></div>
 
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6"><label class="labels">Post code</label><input type="text" class="form-control" value="{{gpd[0][10]}}" readonly></div>
-                    <br>
-                    <div class="col-md-6"><label class="labels">City</label><input type="text" class="form-control" value="{{gpd[0][9]}}" readonly></div>
-                </div>
-
+                <a href="/addtm"
+               style="margin-bottom:0px"
+              class="btn btn-secondary d-flex align-items-center justify-content-center">
+              <span class="sidebar-icon d-inline-flex align-items-center justify-content-center">
+                <svg class="icon icon-xs me-2" fill="green" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path></svg>
+              </span>
+              <span>Add new Timesheet</span>
+            </a>
 
             </div>
         </div>
         <div class="col-md-4">
-            <div class="row mt-3">
-                <div class="p-3 py-5 " style="margin-top:18px">
+            <div class="row mt-4">
+                <div class="p-3 py-5 " >
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h4 class="text-right"></h4>
                 </div>
-                    <div class="col-md-6"><label class="labels">ID Type</label><input type="text" class="form-control" value="{{gpd[0][11]}}" readonly></div>
+                    <div class="col-md-12"><label class="labels">Job Role: {{gpd[0][11]}}</label>
+                    </div>
                     <br>
-                    <div class="col-md-6"><label class="labels">ID Number</label><input type="text" class="form-control" value="{{gpd[0][12]}}" readonly></div>
+                    <div class="col-md-12"><label class="labels">Pay per hour: £{{gpd[0][12]}} </label>
+                    </div>
                     <br>
-                    <div class="col-md-6"><label class="labels">Date Added</label><input type="text" class="form-control" value="{{gpd[0][13]}}" readonly></div>
+                    <div class="col-md-12"><label class="labels">Date Added: {{gpd[0][13]}}</label>
+                    </div>
                     <br>
-                    <div class="col-md-6"><label class="labels">Status</label><input type="text" class="form-control" value="{{gpd[0][14]}}" readonly></div>
+                    <div class="col-md-12" style="color:green"><label class="labels">Status : {{gpd[0][14]}}</label>
+                    </div>
                 </div>
             </div>
         </div>

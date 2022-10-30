@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include 'includes/profileheader.html' %}
+
+    <title>{{title}}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Volt Free Bootstrap Dashboard - Sign up page">
+    <meta name="author" content="Themesberg">
+    <meta name="description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+    <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, themesberg, themesberg dashboard, themesberg admin dashboard" />
+    <link rel="canonical" href="https://appseed.us/admin-dashboards/flask-dashboard-volt">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://demo.themesberg.com/volt-pro">
+    <meta property="og:title" content="Volt Free Bootstrap Dashboard - Sign up page">
+    <meta property="og:description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+    <meta property="og:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://demo.themesberg.com/volt-pro">
+    <meta property="twitter:title" content="Volt Free Bootstrap Dashboard - Sign up page">
+    <meta property="twitter:description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+    <meta property="twitter:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/static/assets/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/static/assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- FA Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Sweet Alert -->
+    <link type="text/css" href="/static/assets/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- Notyf -->
+    <link type="text/css" href="/static/assets/vendor/notyf/notyf.min.css" rel="stylesheet">
+
+    <!-- Volt CSS -->
+    <link type="text/css" href="/static/assets/css/volt.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<div class="container rounded bg-white mt-5 mb-5">
+
+<div class="card card-body border-0 shadow table-wrapper table-responsive">
+    <form action="/calc" method="POST">
+
+    <h1 class="h5 mb-4" style="font-weight: bold; font-size: 40px;">TimeSheet</h1>
+        <div style="display:inline" class="col-md-3">
+            <label style="display:inline"> Week Commencing:** </label>
+            <select class="form-select mb-0" id="week" name="week" placeholder="week" aria-label="ID-type select example" style="display:inline">
+                <option value={{arr[0]}}>{{arr[0]}}</option>
+                <option value={{arr[0]}}>{{arr[1]}}</option>
+                <option value={{arr[0]}}>{{arr[2]}}</option>
+             </select>
+            <br>
+        </div>
+        <br>
+        <table class="table table-hover">
+      <tbody>
+      <tr>
+          <th class="border-gray-200" style="font-weight: bold">#Date</th>
+          <th class="border-gray-200" style="font-weight: bold">Start Time</th>
+          <th class="border-gray-200" style="font-weight: bold">End Time</th>
+          <th class="border-gray-200" style="font-weight: bold">Break</th>
+          </tr>
+      </thead>
+      <tbody>
+         <!-- Item -->
+
+             {% for i in range(7) %}
+              <tr>
+                  <input type="text" name="addtm" id="addtm" hidden>  </input>
+                  <td>
+                      {% if i == 0 %}
+                        Monday
+                      {% elif i == 1  %}
+                        Tuesday
+                      {% elif i == 2  %}
+                        Wednesday
+                      {% elif i == 3  %}
+                        Thursday
+                      {% elif i == 4  %}
+                        Friday
+                      {% elif i == 5  %}
+                        Saturday
+                      {% elif i == 6  %}
+                        Sunday
+                      {% endif %}
+                  </td>
+                      <td>
+                          <select class="form-select mb-0" id="start{{i}}" name="start{{i}}" placeholder="Start" aria-label="ID-type select example" >
+                                {% for i in range(24) %}
+                                    <option value={{i}}>{{i}}:00</option>
+                                {% endfor %}
+                          </select>
+                      </td>
+                      <td>
+                          <select class="form-select mb-0" id="end{{i}}" name="end{{i}}" placeholder="end" aria-label="ID-type select example" >
+                                {% for i in range(24) %}
+                                    <option value={{i}}>{{i}}:00</option>
+                                {% endfor %}
+                          </select>
+                      </td>
+                      <td>
+                          <select class="form-select mb-0" id="break{{i}}" name="break{{i}}" placeholder="break" aria-label="ID-type select example" >
+                                    <option value=0>00:00</option>
+                                    <option value=1>01:00</option>
+                          </select>
+                      </td>
+              </tr>
+             {% endfor %}
+      </tbody>
+  </table>
+        <div>
+             <button class="btn btn-gray-800 mt-2 animate-up-2" style="width:100%" type="submit">Add Timesheet</button>
+         </div>
+        </form>
+  <div class="card-footer px-3 border-0 d-flex flex-column flex-lg-row align-items-right justify-content-end">
+<!--      <div class="fw-normal small mt-4 mt-lg-0">Total : <b>{{hours}}</b> hours </div>-->
+  </div>
+</div>
+</div>
+
+</body>
+</html>

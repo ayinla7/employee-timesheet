@@ -25,11 +25,11 @@
                         </div>
                         <div class="col-12 col-xl-7 px-xl-0">
                             <div class="d-none d-sm-block">
-                                <h2 class="h6 text-gray-400 mb-0">Care-Givers</h2>
+                                <h2 class="h6 text-gray-400 mb-0">Member of Staff</h2>
                                 <h3 class="fw-extrabold mb-2">{{countstaffs}}</h3>
                             </div>
                             <small class="d-flex align-items-center text-gray-500">
-                                Total registered care-givers
+                                Total registered member of staff
 
                             </small>
                             <div class="small d-flex mt-1">
@@ -56,11 +56,11 @@
                         </div>
                         <div class="col-12 col-xl-7 px-xl-0">
                             <div class="d-none d-sm-block">
-                                <h2 class="h6 text-gray-400 mb-0">Patients</h2>
+                                <h2 class="h6 text-gray-400 mb-0">Timesheets</h2>
                                 <h3 class="fw-extrabold mb-2">{{countpatients}}</h3>
                             </div>
                             <small class="d-flex align-items-center text-gray-500">
-                                Total registered patients
+                                Total received timesheets
                             </small>
                             <div class="small d-flex mt-1">
                                 <div>Since last month <svg class="icon icon-xs text-success" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg><span class="text-success fw-bolder">22%</span></div>
@@ -80,13 +80,13 @@
                                 <svg class="icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
                             </div>
                             <div class="d-sm-none">
-                                <h2 class="fw-extrabold h5"> Patients:Care-giver </h2>
+                                <h2 class="fw-extrabold h5"> Timesheet : Member of staff </h2>
                                 <h3 class="mb-1">{{countpatients}}:{{countstaffs}}</h3>
                             </div>
                         </div>
                         <div class="col-12 col-xl-7 px-xl-0">
                             <div class="d-none d-sm-block">
-                                <h2 class="h6 text-gray-400 mb-0"> Patients:Care-giver</h2>
+                                <h2 class="h6 text-gray-400 mb-0"> Timesheet : Member of staff </h2>
                                 <h3 class="fw-extrabold mb-2">{{countpatients }} : {{ countstaffs}}</h3>
                             </div>
                             <small class="d-flex align-items-center text-gray-500">
@@ -102,97 +102,9 @@
         </div>
 
     </div>
-    <div class="row">
-
-          <div class="col-12 col-xl-4">
-            <div class="col-12 px-0">
-                <div class="card border-0 shadow">
-                    <div class="card-body">
-                        <h1 class="fs-5 fw-bold mb-1"><b>Covid 19 Stats</b></h1>
-                        <p>Tells you the percentage of your patients that are vaccinated and their status</p>
-                        <div class="d-block">
-                            <div class="d-flex align-items-center me-5">
-                                 <div class="icon-shape icon-sm icon-shape-purple rounded me-3">
-                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path></svg>                                        </div>
-                                <div class="d-block">
-                                    <label class="mb-0"><b>Not Vaccinated</b></label>
-                                    <h5 class="mb-0">{{countcovid[0]}}% - {{countcovid[4]}}</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-          <div class="col-12 col-xl-4">
-            <div class="col-12 px-0">
-                <div class="card border-0 shadow">
-                    <div class="card-body">
-                        <h1 class="fs-5 fw-bold mb-1"><b>Covid 19 Stats</b></h1>
-                        <p>Tells you the percentage of your patients that are vaccinated and their status</p>
-                        <div class="d-block">
-                            <div class="d-flex align-items-center me-5">
-                                 <div class="icon-shape icon-sm icon-shape-purple rounded me-3">
-                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path></svg>                                        </div>
-                                <div class="d-block">
-                                    <label class="mb-0"><b>Partially Vaccinated - First shot</b></label>
-                                    <h5 class="mb-0">{{countcovid[1]}}% - {{countcovid[5]}}</h5>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-         <div class="col-12 col-xl-4">
-            <div class="col-12 px-0">
-                <div class="card border-0 shadow">
-                    <div class="card-body">
-                        <h1 class="fs-5 fw-bold mb-1"><b>Covid 19 Stats</b></h1>
-                        <p>Tells you the percentage of your patients that are vaccinated and their status</p>
-                        <div class="d-block">
-                            <div class="d-flex align-items-center pt-3">
-                                <div class="icon-shape icon-sm icon-shape-purple rounded me-3">
-                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path></svg>                                        </div>
-                                <div class="d-block">
-                                    <label class="mb-0"><b>Vaccinated - Second Shot</b></label>
-                                    <h5 class="mb-0">{{countcovid[2]}}% - {{countcovid[6]}}</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
 <br>
-<div class="row">
-     <div class="col-12 col-xl-8">
-        </div>
-
-        <div class="col-12 col-xl-4">
-            <div class="col-12 px-0">
-                <div class="card border-0 shadow">
-                    <div class="card-body">
-                        <h1 class="fs-5 fw-bold mb-1"><b>Covid 19 Stats</b></h1>
-                        <p>Tells you the percentage of your patients that are vaccinated and their status</p>
-                        <div class="d-block">
-                            <div class="d-flex align-items-center pt-3">
-                                <div class="icon-shape icon-sm icon-shape-purple rounded me-3">
-                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path></svg>                                        </div>
-                                <div class="d-block">
-                                    <label class="mb-0"><b>Fully Vaccinated - Booster Shot</b></label>
-                                    <h5 class="mb-0">{{countcovid[3]}}% - {{countcovid[7]}}</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
 
 {% endblock content %}
 

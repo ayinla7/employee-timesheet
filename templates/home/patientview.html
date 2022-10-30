@@ -10,8 +10,8 @@
 
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4 "style="margin-top: 30px">
       <div class="d-block mb-4 mb-md-0">
-          <h2 class="h4">Patients Records</h2>
-          <p class="mb-0">List of all Patients</p>
+          <h2 class="h4">Timesheet Records</h2>
+          <p class="mb-0">List of all Timesheets</p>
       </div>
   </div>
 
@@ -19,34 +19,51 @@
       <table class="table table-hover">
           <tbody>
           <tr>
-              <th class="border-gray-200">#</th>
-              <th class="border-gray-200">First Name</th>
-              <th class="border-gray-200">Second Name</th>
-              <th class="border-gray-200">Email</th>
-              <th class="border-gray-200">Gender</th>
-              <th class="border-gray-200">Covid Vaccine</th>
-              <th class="border-gray-200">Date Added</th>
-              <th class="border-gray-200">Status</th>
+          <th class="border-gray-200">#ID</th>
+              <th class="border-gray-200">Staff ID</th>
+            <th class="border-gray-200">Timesheet ID</th>
+            <th class="border-gray-200">Week Date</th>
+            <th class="border-gray-200">Hours</th>
+            <th class="border-gray-200">Date added</th>
+            <th class="border-gray-200">Status</th>
               <th class="border-gray-200">Action</th>
-              </tr>
+
+          </tr>
           </thead>
           <tbody>
              <!-- Item -->
              {% if countpatients > 0 %}
                  {% for datas in getpatients %}
                   <tr>
-                      <form action="/med" method="POST">
-                      <input type="text" name="medpatientId" id="medpatientId" value="{{datas[0]}}" hidden>  </input>
+                      <form action="/action" method="POST">
+                      <input type="text" name="medpatientId" id="medpatientId" value="{{datas[2]}}" hidden>  </input>
                       {% for data in datas %}
                       <td>
                           <a class="fw-bold">
                               {{ data }}
                           </a>
                       </td>
+
                       {% endfor %}
-                      <td>
-                          <button class="btn btn-gray-800" type="submit">Profile</button>
-                      </td>
+                          {% if datas[6] == "SUBMITTED" %}
+                              <td>
+                                  <select class="form-select mb-0" id="newstatus" name="newstatus" aria-label="ID-type select example" required>
+                                        <option value="" selected disabled hidden>Select Action</option>
+                                        <option value="ACCEPTED">ACCEPTED</option>
+                                        <option value="REJECTED">REJECTED</option>
+                                  </select>
+                              </td>
+                              <td>
+                              <button class="btn btn-gray-800" type="submit">Modify</button>
+                              </td>
+                              {% else %}
+                              <td>
+                                  <a class="fw-bold"> {{ datas[6] }} </a>
+                              </td>
+                              <td>
+                                  <a class="fw-bold"> {{ datas[6] }} </a>
+                              </td>
+                          {% endif %}
                       </form>
                   </tr>
                   {% endfor %}
